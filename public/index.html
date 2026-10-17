@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AxForge voice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <span class="logo" aria-hidden="true">◆</span>
+    <div><strong>AxForge voice</strong><small>speech to text with Whisper, text to speech with Piper</small></div>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <h2>Speech to text</h2>
+      <p class="hint">Record from your microphone, or pick an audio file.</p>
+      <div class="row">
+        <button id="record">Start recording</button>
+        <span id="timer" class="timer"></span>
+      </div>
+      <label class="upload">Or an audio file <input id="file" type="file" accept="audio/*"></label>
+      <textarea id="transcript" rows="7" placeholder="The words appear here." readonly></textarea>
+      <div class="row">
+        <button id="copy" class="ghost" type="button">Copy</button>
+        <button id="read-back" class="ghost" type="button">Read it back</button>
+      </div>
+      <p id="stt-status" class="status" role="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Text to speech</h2>
+      <textarea id="text" rows="7">Good morning. Your order has shipped, and it should arrive on Tuesday.</textarea>
+      <button id="speak">Speak</button>
+      <audio id="player" controls hidden></audio>
+      <a id="download" class="ghost" download="axforge-speech.wav" hidden>Download the audio</a>
+      <p id="tts-status" class="status" role="status"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

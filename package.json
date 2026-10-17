@@ -1,0 +1,10 @@
+{
+  "name": "axforge-voice",
+  "version": "1.0.0",
+  "description": "Speech to text and text to speech, on the AxForge API. Node.js only, no dependencies.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": { "start": "node server.js" }
+}
